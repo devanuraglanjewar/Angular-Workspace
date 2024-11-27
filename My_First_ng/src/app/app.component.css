@@ -1,0 +1,27 @@
+.in{
+  margin-top: 15%;
+}
+table {
+  border-collapse: collapse;
+  width: 30%;
+  margin: 0 auto;
+  background-color: bisque;
+  border-radius: 16px;
+  padding: 10%;
+}
+h2{
+  text-align: center;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+

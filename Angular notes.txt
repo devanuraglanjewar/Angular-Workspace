@@ -1,0 +1,50 @@
+Day 2:
+Angular Application is completely dynamic application
+
+* Data Binding:
+   1) String interpolation
+   [TS]----------------------------->[HTML]
+   String s = "Anurag"; >> Java
+   s:String = "Anurag" >> Angular
+   {{s}} >> Html
+
+   to show brackets without processing data use: ngNonBindable 
+   for example:
+   <p ngNonBindable>String Interpoletion: in amgular String Interpoletion is achived by using ... {{}}</p>
+
+   2) Property Binding:
+
+   [TS]----------------------------->[HTML]
+   num1:number = 20;
+   num2:any=30;
+   num3 = 40;
+
+   to show in HTML:
+   <input type="text" [value]=num1>
+
+   3) Event Binding
+   [TS]----------------------------->[HTML]
+   login(){                      <input (click)="login()" type="button" value="login">  
+      //logic
+   }
+
+   4) Tow way Data Binding
+   [TS]----------------------------->[HTML]
+   [TS]<-----------------------------[HTML]
+   num1:number = 20;                 <input [(ngModel)]="name">
+   name:string = "Anurag";            <input [(ngModel)]="num1">
+
+   ngModel is a inbuild function, to used ngModel import FormsModule
+   
+   tow way data binding is the cobination of property binding and event binding
+   
+
+
+
+
+
+
+
+   
+
+   

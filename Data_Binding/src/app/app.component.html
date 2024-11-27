@@ -1,0 +1,31 @@
+<h2>Interpoletion</h2>
+<p>String Interpoletion: in amgular String Interpoletion is achived by using ...</p>
+{{username}}
+
+<p ngNonBindable>String Interpoletion: in amgular String Interpoletion is achived by using ... {{}}</p>
+<p>***********************************************************************************************************</p>
+
+<h2>Property Binding</h2>
+<p>Property Binding: in angular Property Binding is achived by using []</p>
+<input type="text" [value]=num1>
+<p>***********************************************************************************************************</p>
+
+<h2>Event Binding</h2>
+<p>Event Binding: in angular Event Binding is achived by using ()</p>
+<input (click)="login()" type="button" value="login">
+<p>***********************************************************************************************************</p>
+
+<h2>Two Way Binding</h2>
+<p>Two Way Binding: in angular Two Way Binding is achived by using [(ngModel)]</p>
+<input [(ngModel)]="num2" type="text">
+{{num2}}
+<p>***********************************************************************************************************</p>
+
+<h2>Task1: Without data binding</h2>
+<input type="text" (input)="onInputChange($event)"/>
+{{task1}}
+<p>***********************************************************************************************************</p>
+
+<h2>Task2: With data binding</h2>
+<input [(ngModel)]="task2" type="text">
+{{task2}}

@@ -1,0 +1,15 @@
+How to check node version 
+>> node -v
+
+How to install angular cli 16.2.8
+>> npm install -g @angular/cli@16.2.8
+
+How to check angular version
+>> ng v
+
+How to create angular project
+>> ng new project-name
+
+How to run Angular project
+>> ng serve
+
