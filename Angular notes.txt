@@ -2,6 +2,8 @@ Day 2:
 Angular Application is completely dynamic application
 
 * Data Binding:
+   data binding is a process of linking the data from the server to the UI components of the application.
+
    1) String interpolation
    [TS]----------------------------->[HTML]
    String s = "Anurag"; >> Java
@@ -13,7 +15,7 @@ Angular Application is completely dynamic application
    <p ngNonBindable>String Interpoletion: in amgular String Interpoletion is achived by using ... {{}}</p>
 
    2) Property Binding:
-
+   use for input fields 
    [TS]----------------------------->[HTML]
    num1:number = 20;
    num2:any=30;
@@ -23,6 +25,7 @@ Angular Application is completely dynamic application
    <input type="text" [value]=num1>
 
    3) Event Binding
+   always use for function call
    [TS]----------------------------->[HTML]
    login(){                      <input (click)="login()" type="button" value="login">  
       //logic
@@ -37,7 +40,38 @@ Angular Application is completely dynamic application
    ngModel is a inbuild function, to used ngModel import FormsModule
    
    tow way data binding is the cobination of property binding and event binding
+********************************************************************************************************************************
+
+Day 3:
+*Angular Directives:
+   whats Angular Directives
+   Angular Directives are the classes that are used to extend the functionality of the HTML elements.
+   Directives are used to add new functionality to the HTML elements.
+   Directives are used to change the behavior of the HTML elements.
+   Directives are used to change the appearance of the HTML elements.
+   Directives are used to add new attributes to the HTML elements.
+   Directives are used to add new properties to the HTML elements.
+   Directives are used to add new methods to the HTML elements.
+
+   Types
+   1) Structural Directives >> dynamic layout >> if, for , switch
+   Whst is Structural Directives
+   Structural Directives are the directives that are used to change the structure of the HTML elements.
+   Structural Directives are used to add or remove HTML elements.
+
+      for
+      [Ts]----------------------->[HTML]
+      Data = [1,2,3,4,5]          <ul *ngFor="let d of Data">
+                                  <li>{{d}}</li>
+                                  </ul>
+
+      Switch
+
    
+   2) Attribute Directives
+
+
+
 
 
 

@@ -1,0 +1,42 @@
+<input type="button" value="Show / Hide" (click)="changeapper()">
+<h1 *ngIf="Display">This is my Heading</h1>
+<p>************************************************************************************************</p>
+
+<input type="button" [value]=s (click)="change2()">
+<p *ngIf="Display2">this is paragraph</p>
+<p>************************************************************************************************</p>
+
+<h1>using For</h1>
+<ul *ngFor="let d of data">
+  <li>{{d}}</li>
+</ul>
+<p>************************************************************************************************</p>
+
+<h1>Student Details</h1>
+<table border="">
+  <tr>
+    <th>Student id</th>
+    <th>Student Name</th>
+    <th>Student Age</th>
+    <th colspan="3">Marks</th>
+  </tr>
+  <tbody *ngFor="let student of students">
+    <tr>
+      <td>{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.age}}</td>
+      <td *ngFor="let sm of student.marks">{{sm}}</td>
+    </tr>
+  </tbody>
+</table>
+<p>************************************************************************************************</p>
+
+<h1>switch case</h1>
+<input type="number">
+
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="1">one</p>
+  <p *ngSwitchCase="2">two</p>
+  <p *ngSwitchCase="3">three</p>
+  <p *ngSwitchDefault>wrong input</p>
+</div>
