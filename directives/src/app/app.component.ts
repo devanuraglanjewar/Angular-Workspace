@@ -31,7 +31,10 @@ export class AppComponent {
     {id:5,name:"Mike",age:24,marks:[65,55,48]}
   ]
 
-  value = ;
+  value: number | null = null;
+  getvalue(event:Event):void{
+    const inputelement = event.target as HTMLInputElement;
+    this.value = Number(inputelement.value);
+  }
 
 }
-

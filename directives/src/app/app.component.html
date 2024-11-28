@@ -32,7 +32,7 @@
 <p>************************************************************************************************</p>
 
 <h1>switch case</h1>
-<input type="number">
+<input type="number" (input)="getvalue($event)">
 
 <div [ngSwitch]="value">
   <p *ngSwitchCase="1">one</p>
