@@ -40,3 +40,33 @@
   <p *ngSwitchCase="3">three</p>
   <p *ngSwitchDefault>wrong input</p>
 </div>
+<p>************************************************************************************************</p>
+
+<h1>Attribute Directives</h1>
+<h1>Student Details</h1>
+<table border="">
+  <tr>
+    <th>Student id</th>
+    <th>Student Name</th>
+    <th>Student Age</th>
+    <th colspan="3">Marks</th>
+  </tr>
+  <tbody *ngFor="let student1 of students1">
+    <tr>
+      <td>{{student1.id}}</td>
+      <td>{{student1.name}}</td>
+      <td *ngFor="let sm of student1.marks">{{sm}}</td>
+    </tr>
+  </tbody>
+</table>
+<p>************************************************************************************************</p>
+<br>
+<h1 [ngClass]="{'myred':mycolour == 'red', 'myblue':mycolour == 'blue'}">Change the color dynamically</h1>
+<br>
+<p>************************************************************************************************</p>
+<br>
+<h1 [ngClass]="{'myred':mycolor1 == 'red', 'myblue':mycolor1 == 'blue'}">Change the color dynamically</h1>
+<input type="button" value="Red" (click)="changetoRed()">
+<input type="button" value="Blue" (click)="changetoblue()">
+<br>
+<p>************************************************************************************************</p>

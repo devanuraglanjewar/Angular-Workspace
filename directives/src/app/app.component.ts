@@ -10,6 +10,7 @@ export class AppComponent {
 
   Display:Boolean = true;
   Display2:Boolean = true;
+yellow: any;
 
   changeapper(){
     this.Display =! this.Display;
@@ -37,4 +38,23 @@ export class AppComponent {
     this.value = Number(inputelement.value);
   }
 
+
+  students1 =[
+    {id:1,name:"John",age:20,marks:[65,55,48]},
+    {id:2,name:"Jane",age:19,marks:[65,55,48]},
+    {id:3,name:"Bob",age:12,marks:[65,55,48]},
+    {id:4,name:"Alice",age:16,marks:[65,55,48]},
+    {id:5,name:"Mike",age:24,marks:[65,55,48]}
+  ]
+  mycolour = "red";
+
+  mycolor1 = "";
+
+  changetoRed(){
+    this.mycolor1 = "red";
+  }
+
+  changetoblue(){
+    this.mycolor1 = "blue";
+  }
 }

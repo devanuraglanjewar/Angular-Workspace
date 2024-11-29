@@ -66,11 +66,25 @@ Day 3:
                                   </ul>
 
       Switch
+      [Ts]------------------------>[HTML]
+      value = 1                    <div [ngSwitch]="value">
+                                      <p *ngSwitchCase="1">one</p> ------> one will display
+                                      <p *ngSwitchCase="2">two</p> 
+                                      <p *ngSwitchCase="3">three</p>
+                                      <p *ngSwitchDefault>wrong input</p>
+                                   </div>
+
 
    
    2) Attribute Directives
+   What is Attribute Directives
+   Attribute Directives are the directives that are used to add new attributes to the HTML elements.
+   Attribute Directives are used to change the behavior of the HTML elements.
+   Attribute Directives are used to change the appearance of the HTML elements.
 
-
+   [ts]------------------------------>[html]
+   if age is < 20 = yewllow          <td [ngStyle]="{'background-color': student1.age < 20 ? 'yellow' : 'red'}">{{student1.age}}</td>
+   else red 
 
 
 
