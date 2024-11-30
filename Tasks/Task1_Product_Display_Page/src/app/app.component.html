@@ -1,0 +1,57 @@
+<div class="main">
+  <h1 style="color: white;">Product display page</h1>
+
+  <form action="
+
+  "></form>
+
+  <table id="table" border="1">
+    <tr>
+      <th>Product Name</th>
+      <th>Product Price</th>
+      <th>Avilability check</th>
+      <th>Logs</th>
+    </tr>
+    <tbody id="table-body">
+      <tr *ngFor="let product of Products">
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>
+          <span *ngIf="product.av" class="available">Available</span>
+          <span *ngIf="!product.av" class="out-of-stock">Out of Stock</span>
+        </td>
+        <td>
+          <button (click)="logProductDetails(product)" id="btn">Details</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <input type="button" value="Add Product +" id="addp"  (click)="toggleAddForm()" >
+
+  <div id="addp-form" *ngIf="showAddForm">
+    <form (ngSubmit)="addProduct()">
+      <table>
+        <tr>
+          <td><label for="name">Product Name:</label></td>
+          <td><input type="text" id="name" name="name" [(ngModel)]="newProduct.name"></td>
+        </tr>
+        <br>
+        <tr>
+          <td><label for="price">Product Price:</label></td>
+          <td><input type="number" id="price"  [(ngModel)]="newProduct.price" name="price"></td>
+        </tr>
+        <br>
+        <tr>
+          <td><label for="av">Availibility:</label></td>
+          <td>yes <input type="checkbox" id="av" name="av" [(ngModel)]="newProduct.av" value="true"></td>
+          <td>No <input type="checkbox" id="av" name="av" [(ngModel)]="newProduct.av" value="False"></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button type="submit">Save</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
