@@ -40,6 +40,7 @@ Angular Application is completely dynamic application
    ngModel is a inbuild function, to used ngModel import FormsModule
    
    tow way data binding is the cobination of property binding and event binding
+
 ********************************************************************************************************************************
 
 Day 3:
@@ -82,9 +83,28 @@ Day 3:
    Attribute Directives are used to change the behavior of the HTML elements.
    Attribute Directives are used to change the appearance of the HTML elements.
 
-   [ts]------------------------------>[html]
-   if age is < 20 = yewllow          <td [ngStyle]="{'background-color': student1.age < 20 ? 'yellow' : 'red'}">{{student1.age}}</td>
+   [Ts]------------------------------>[html]
+   if age is < 20 = yellow          <td [ngStyle]="{'background-color': student1.age < 20 ? 'yellow' : 'red'}">{{student1.age}}</td>
    else red 
+********************************************************************************************************************************
+Day 4:
+   *Creating and using Components:
+   What is Components
+   Components are the building blocks of the Angular application.
+   Components are the reusable pieces of code.
+   Components are the classes that are used to define the user interface of the Angular application.
+
+   To create component use this command
+      ng g c componentname
+   To render components 
+      <app-component></app-component>
+   
+   
+
+
+
+
+
 
 
 

@@ -1,0 +1,43 @@
+<!-- Task 2: Build a Simple Task Tracker
+**User Story:**
+As a user, I want to add, view, and mark tasks as completed so that I can manage my to-do list efficiently.
+**Requirements:**
+- Use two-way binding [(ngModel)] to input a new task.
+- Use *ngFor to display the task list.
+- Add a 'Mark as Done' button for each task. When clicked, use [ngClass] or [ngStyle] to change the appearance of completed tasks. (optional)
+- Use event binding to remove tasks from the list. -->
+
+<div class="main">
+  <div class="head"><h1>Task Tracker</h1></div>
+
+  <div class="addtaskform">
+    <form action="">
+      <input type="Number" name="id" placeholder="Task Id" [(ngModel)]="idInput">
+      <input type="text" name="task" placeholder="Enter task" [(ngModel)]="taskInput">
+      <input type="button" name="submit" value="Add Task" (click)="submitTask()">
+    </form>
+  </div>
+
+
+  <div class="tasks">
+    <table>
+      <tr>
+        <th>Task</th>
+        <th>Actions</th>
+      </tr>
+
+      <tr *ngFor="let task of tasks; let i = index" [ngStyle]= "{'background-color': taskstatus == 'Done' ? 'green' : 'red'}">
+        <td>
+          {{task}}
+
+        </td>
+        <td>
+          <button (click) ="donetask(i)">Done ✔️</button>
+        </td>
+        <!-- <td>
+          <button (click)="removeTask(i)">Remove</button>
+        </td> -->
+      </tr>
+    </table>
+  </div>
+</div>
