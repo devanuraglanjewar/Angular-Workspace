@@ -8,32 +8,46 @@ import { Task } from './task.model';
 })
 export class AppComponent {
   title = 'task-list';
-  tasks: Task[] = [];
+  tasks:Task[] = [];
   idInput = null
   taskInput: string = '';
+
 
   i  = null ;
 
   submitTask() {
-    if (this.taskInput.trim()) {
-      this.tasks.push({
-        id: Number(this.idInput) , name: this.taskInput,
-        completed: false
-      });
+    if (this.taskInput.trim()) {const taskId = Number(this.idInput);
 
+      // Check if the ID already exists in the tasks array
+      const existingTask = this.tasks.find(task => task.id === taskId);
+
+      if (existingTask) {
+        // Show an alert if the ID already exists
+        alert(`Task with ID ${taskId} already exists.`);
+      } else {
+        // If the ID doesn't exist, add the new task
+        this.tasks.push({
+          id: taskId,
+          name: this.taskInput,
+          completed: false
+        });
+      }
     }
   }
 
   taskstatus:string = 'pending'
   donetask(i: number) {
-    this.taskstatus = 'Done';
+    if(this.tasks[i]){
+      this.tasks[i].completed = true;
     console.log({i});
+    }
   }
 
 
-  // removeTask(index: number) {
-  //   this.tasks.splice(index);
-  // }
+  removeTask(i:number) {
+    this.tasks.splice(i,1);
+    console.log({i});
+  }
 
 
 
