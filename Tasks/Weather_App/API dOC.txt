@@ -1,0 +1,16 @@
+const data = null;
+
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener('readystatechange', function () {
+	if (this.readyState === this.DONE) {
+		console.log(this.responseText);
+	}
+});
+
+xhr.open('GET', 'https://weather338.p.rapidapi.com/locations/get-details?placeid=69bedc6a5b6e977993fb3e5344e3c06d8bc36a1fb6754c3ddfb5310a3c6d6c87&language=en-US');
+xhr.setRequestHeader('x-rapidapi-key', '29f0956b8dmsh6c94fb9c2564d06p177c8cjsn8d46ba05a6cf');
+xhr.setRequestHeader('x-rapidapi-host', 'weather338.p.rapidapi.com');
+
+xhr.send(data);

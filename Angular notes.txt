@@ -98,6 +98,11 @@ Day 4:
       *ng g c componentname*
    To render components 
       <app-componentname></app-componentname>
+********************************************************************************************************************************
+Day 5:
+Form_Handaling:
+   
+
    
    
 
