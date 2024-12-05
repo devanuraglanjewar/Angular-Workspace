@@ -1,0 +1,101 @@
+.right-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.r-nav{
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.r-data-box{
+  flex: 12;
+}
+
+.nav-tabs{
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.today{
+  margin-right:10px ;
+  color: #c5c5c5;
+}
+.today:hover{
+  color: #1a1a1a;
+  cursor: pointer;
+}
+.today-active{
+  color: #1a1a1a;
+}
+.nav-bar-matric{
+  display: flex;
+  flex-direction: row;
+  margin-right: 30px;
+}
+.week{
+  color: #c5c5c5;
+}
+.week:hover{
+  color: #1a1a1a;
+  cursor: pointer;
+}
+.week-active{
+  color: #1a1a1a;
+}
+.underline{
+  width: 50px;
+  height: 2px;
+  background-color: #1a1a1a;
+  margin-top: 1.5rem;
+}
+.underline-today{
+  transform: translate(200%,0,0);
+  transition: 100ms;
+}
+.underline-week{
+  transform: translate(200%,0,0);
+  transition: 100ms;
+}
+
+.celsius{
+  border-radius: 500px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px ;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  font-size: small;
+}
+.fahrenheit{
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 500px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px ;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  font-size: small;
+}
+
+.celsius:hover{
+  background-color:#1a1a1a;
+  color: #ffffff;
+  cursor: pointer;
+}
+.fahrenheit:hover{
+  background-color:#1a1a1a;
+  color: #ffffff;
+  cursor: pointer;
+}

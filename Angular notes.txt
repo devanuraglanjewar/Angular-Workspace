@@ -98,9 +98,49 @@ Day 4:
       *ng g c componentname*
    To render components 
       <app-componentname></app-componentname>
+
 ********************************************************************************************************************************
 Day 5:
-Form_Handaling:
+Pipes in AngularJS:
+   Pipes in AngularJS are used to transform the display of data in templates without changing the original data. 
+   They are simple functions designed to format data.
+   Syntax:
+      {{ expression | pipeName }}
+   
+   Types of Pipes:
+   1) Built-in Pipes:
+
+      uppercase: Converts text to uppercase.
+      Example: {{ 'hello' | uppercase }} → HELLO
+
+      lowercase: Converts text to lowercase.
+      Example: {{ 'HELLO' | lowercase }} → hello
+      
+      currency: Formats numbers as currency.
+      Example: {{ 1234.5 | currency }} → $1,234.50
+      
+      date: Formats dates.
+      Example: {{ '2024-12-05' | date:'fullDate' }} → Thursday, December 5, 2024
+      
+      json: Converts objects to JSON strings.
+      Example: {{ {name: 'Angular'} | json }} → {"name":"Angular"}
+      
+      number: Formats numbers with decimals.
+      Example: {{ 1234.5678 | number:'1.2-2' }} → 1,234.57
+   
+
+   2) Chaining Pipes: Multiple pipes can be chained.
+      Example:
+         {{ 'hello world' | uppercase | lowercase }}
+
+
+   3) Custom Pipes:
+   Developers can create custom pipes for specific requirements.
+   Steps:
+      Use the @Pipe decorator to define a pipe.
+      Implement the PipeTransform interface. Example:
+   
+   
    
 
    
